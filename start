@@ -6,3 +6,4 @@ pip install -r requirements.txt
 export FLASK_APP=storyAI.py
 clear
 echo "You're all good to go, mate!"
+heroku open
