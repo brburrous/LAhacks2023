@@ -5,4 +5,5 @@ app/__pycache__
 credentials.json
 .vscode
 app/static/dist/css/*
+app/static/dist/css/output.css
 
