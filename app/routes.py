@@ -13,7 +13,7 @@ ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('images.html')
+    return render_template('style_selection.html')
 
 
 @app.route('/',  methods=("POST", "GET"))
@@ -56,3 +56,50 @@ def displayImage():
 @app.route('/riley')
 def riley():
     return render_template('style_selection.html')
+<<<<<<< Updated upstream
+=======
+
+@app.route('/narrative.builder1')
+def narrative_builder1():
+    title = 'Part 1: Call to Adventure'
+    description = 'Upload an image that signifies the beginning of your adventure'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=1)
+
+@app.route('/narrative.builder2')
+def narrative_builder2():
+    title = 'Part 2: The Crossing of the First Threshold'
+    description = 'This is the point where the hero actually crosses into the field of adventure, leaving the known limits of their world and venturing into an unknown and dangerous realm where the rules and limits are unknown'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=2)
+
+@app.route('/narrative.builder3')
+def narrative_builder3():
+    title = 'Part 3: The Road of Trials'
+    description = 'The road of trials is a series of tests that the hero must undergo to begin the transformation. Often the hero fails one or more of these tests. Eventually, the hero will overcome these trials and move on to the next step.'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=3)
+
+@app.route('/narrative.builder4')
+def narrative_builder4():
+    title = 'Part 4: Ordeal/Abyss'
+    description = 'The hero experiences a major hurdle or obstacle, such as a life-or-death crisis. They must come face to face with their weaknesses and must overcome them. This will be something the hero barely manages to accomplish'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=4)
+
+@app.route('/narrative.builder5')
+def narrative_builder5():
+    title = 'Part 5: Reward'
+    description = 'After surviving death, the hero earns a reward or accomplishes their goal. This is a moment of great success in the story. The hero is a changed person now, though they may not fully realize the extent of the change in their continued focus on the matter at hand.'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=5)
+
+@app.route('/narrative.builder6')
+def narrative_builder6():
+    title = 'Part 6: Return with Elixir'
+    description = 'The hero brings their knowledge or the "elixir" back to the ordinary world, where they apply it to help all who remain there. This is the true reward for the journey and transformation'
+    return render_template('narrative_builder.html', title=title, description=description, route_num=6)
+
+@app.route('/your.story')
+def your_story():
+    return render_template('your_story.html')
+
+@app.route('/loading')
+def loading():
+    return render_template('loading.html')
+>>>>>>> Stashed changes

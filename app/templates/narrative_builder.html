@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<header>
+    <h1 class="bg-black text-primary-blue text-6xl font-serif p-6">{{ title }}</h1>
+    <p class="bg-black text-white ps-6 p-3 ">{{ description }}</p>
+</header>
+<main id = "narrative-page" class="bg-black h-screen">
+    <div class="flex flex-wrap">
+        <!-- Left column: file upload button -->
+        <div class="w-full md:w-1/2 p-4">
+          <form>
+            <label class="block mb-2 font-bold text-primary-blue" for="file-upload">
+              Upload Image
+            </label>
+            <input class="block w-full px-4 py-2 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white" id="file-upload" type="file">
+          </form>
+        </div>
+
+        <!-- Right column: text inputs and text area -->
+        <div class="w-full md:w-1/2 p-4">
+          <form>
+            <div class="mb-4">
+              <label class="block mb-2 font-bold text-primary-blue" for="who-input">
+                Who is in this photo?
+              </label>
+              <input class="block w-full px-4 py-2 leading-tight bg-slate-700 text-gray-200 border-slate-700 border rounded appearance-none focus:outline-none focus:bg-gray-300 focus:text-gray-800 focus:border-gray-500" id="who-input" type="text">
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 font-bold text-primary-blue" for="where-input">
+                Where is the location?
+              </label>
+              <input class="block w-full px-4 py-2 leading-tight bg-slate-700 text-gray-200 border-slate-700 border rounded appearance-none focus:outline-none focus:bg-gray-300 focus:text-gray-800 focus:border-gray-500" id="where-input" type="text">
+            </div>
+            <div class="mb-4">
+              <label class="block mb-2 font-bold text-primary-blue" for="what-textarea">
+                What is happening?
+              </label>
+              <textarea class="block w-full px-4 py-2 leading-tight bg-slate-700 text-gray-200 border-slate-700 border rounded appearance-none focus:outline-none focus:bg-gray-300 focus:text-gray-800 focus:border-gray-500" id="what-textarea" rows="6"></textarea>
+            </div>
+          </form>
+          
+          {% if route_num < 6 %}
+            <div class="mb-4">
+              <button onclick="window.location.href='/narrative.builder{{ route_num + 1 }}';"
+              class="bg-primary-blue hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                Submit
+              </button>
+            </div>
+          {% else %}
+            <div class="mb-4">
+              <button onclick="window.location.href='/loading';"
+              class="bg-primary-blue hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                Submit
+              </button>
+            </div>
+          {% endif %} 
+
+          
+
+        </div>
+      </div>
+      
+</main>
+{% endblock %}
