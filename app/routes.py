@@ -78,11 +78,6 @@ def displayImage():
 #     'url': 'https://%s.s3.amazonaws.com/%s' % (S3_BUCKET, file_name)
 #   })
 
-@app.route('/s3')
-def upload2amz():
-    s3 = boto3.resource("s3")
-    for bucket in s3.buckets.all():
-        print(bucket.name)
-    return "get fucked"
+
 
 
