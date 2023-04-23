@@ -53,6 +53,10 @@ def displayImage():
  
 
 
-@app.route('/riley')
-def riley():
+@app.route('/style.selection')
+def style_selection():
     return render_template('style_selection.html')
+
+@app.route('/narrative.builder')
+def narrative_builder():
+    return render_template('narrative_builder.html')
