@@ -8,9 +8,24 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 
 
-
 UPLOAD_FOLDER = os.path.join('static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+
+
+cred = credentials.Certificate('firebase_key.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client() 
+
+def addName(db, url):
+    db.collection(u'img_urls').add({
+        u'bmj': url,
+        u'processed': False
+    })
+
+
+
 
 
 
@@ -45,6 +60,12 @@ def uploadFiles():
                 'ContentType':uploaded_img.mimetype
             }
         ) 
+        file_name=session['uploaded_img_file_path'],
+        bucket = "lahacks2023-ky-austin-riley-brian"
+        region = "us-west-1" 
+        url = f"https://{bucket}.s3.{region}.amazonaws.com/{img_filename}"
+        addName(db, url)
+
     return render_template('images2.html')
 
 @app.route('/show_image')
@@ -56,40 +77,7 @@ def displayImage():
     return render_template('show_image.html', user_image = img_file_name)
  
 
-<<<<<<< HEAD
-@app.route('/firebase')
-def add2Firebase():
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
-cred = credentials.Certificate('firebase_key.json')
-
-app = firebase_admin.initialize_app(cred)
-
-db = firestore.client() 
-doc_ref = db.collection(u'users').document(u'alovelace')
-doc_ref.set({
-    u'first': u'Ada',
-    u'last': u'Lovelace',
-    u'born': 1815
-})
-    
-
-def addName(name):
-    cred = credentials.Certificate('firebase_key.json')
-
-    app = firebase_admin.initialize_app(cred)
-
-    db = firestore.client() 
-    doc_ref = db.collection(u'users').document(name)
-    doc_ref.set({
-        u'first': name,
-        u'last': u'Lovelace',
-        u'born': 1815
-    })
-=======
 
 @app.route('/riley')
 def riley():
     return render_template('style_selection.html')
->>>>>>> master
