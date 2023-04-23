@@ -4,6 +4,8 @@ foo
 app/__pycache__
 credentials.json
 .vscode
+.DS_Store
 app/static/dist/css/*
 app/static/dist/css/output.css
+
 
