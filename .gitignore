@@ -4,5 +4,6 @@ app/static/uploads/*
 foo
 app/__pycache__
 credentials.json
+.vscode
 
 
