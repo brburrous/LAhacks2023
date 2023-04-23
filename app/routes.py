@@ -56,3 +56,7 @@ def displayImage():
 @app.route('/riley')
 def riley():
     return render_template('style_selection.html')
+
+@app.route('/loading')
+def loading():
+    return render_template('loading.html')
