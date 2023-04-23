@@ -2,14 +2,7 @@ venv
 __pycache__
 app/static/uploads/*
 foo
-<<<<<<< HEAD
 app/__pycache__
 credentials.json
 
 
-app/__pycache__
-=======
-app/__pycaches__
-.vscode
-credentials.json
->>>>>>> a59686a (asdf)
