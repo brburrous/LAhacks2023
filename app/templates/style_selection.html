@@ -2,20 +2,18 @@
 
 {% block body %}
 <header>
-    <h1 class="title"> Select Style</h1>
+    <h1 class="bg-black text-primary-blue text-6xl font-serif p-6"> Select Style</h1>
 </header>
-<main class="selection-page">
+<main class="selection-page bg-black min-h-screen">
     <section class="selection-page" id = "selection">
-        <div class="btn-container bg-black">
-            <div class="card-v2 rounded">
-                <figure>
-                  <img src="{{ url_for('static', filename = 'uploads/andy.png') }}" alt="Image description">
-                  <figcaption class="card-v2__caption px-3 lg:px-5 pt-5 lg:pt-8 pb-3 lg:pb-5 text-center">
-                    <div class="text-lg lg:text-xl">Card Title</div>
+        <div class="card-v2 rounded pl-10 py-3 ">
+            <figure class="relative overflow-hidden max-w-lg min-h-fit transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+                <img class="rounded-lg" src="{{ url_for('static', filename = 'uploads/fantasy1.jpeg') }}" alt="Image description">
+                <figcaption class=" card-v2__caption px-3 lg:px-5 pt-5 lg:pt-8 pb-3 lg:pb-5 text-center">
+                    <div class="text-2xl lg:text-4xl">Fantasy Story</div>
                     <div class="mt-1 lg:mt-1.5 text-sm lg:text-base opacity-70">Label</div>
-                  </figcaption>
-                </figure>
-            </div>
+                </figcaption>
+            </figure>
         </div>
     </section>
 </main>
