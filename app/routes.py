@@ -52,13 +52,6 @@ def displayImage():
     return render_template('show_image.html', user_image = img_file_name)
  
 
-
-@app.route('/riley')
-def riley():
-    return render_template('style_selection.html')
-<<<<<<< Updated upstream
-=======
-
 @app.route('/narrative.builder1')
 def narrative_builder1():
     title = 'Part 1: Call to Adventure'
@@ -102,4 +95,3 @@ def your_story():
 @app.route('/loading')
 def loading():
     return render_template('loading.html')
->>>>>>> Stashed changes
