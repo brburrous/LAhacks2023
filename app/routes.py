@@ -56,6 +56,7 @@ def displayImage():
     return render_template('show_image.html', user_image = img_file_name)
  
 
+<<<<<<< HEAD
 @app.route('/firebase')
 def add2Firebase():
 import firebase_admin
@@ -86,3 +87,9 @@ def addName(name):
         u'last': u'Lovelace',
         u'born': 1815
     })
+=======
+
+@app.route('/riley')
+def riley():
+    return render_template('style_selection.html')
+>>>>>>> master
