@@ -64,3 +64,7 @@ def narrative_builder():
 @app.route('/your.story')
 def your_story():
     return render_template('your_story.html')
+
+@app.route('/loading')
+def loading():
+    return render_template('loading.html')
