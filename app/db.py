@@ -28,7 +28,8 @@ def addName(db, name, url):
     db.collection(u'img_urls').add({
         u'name': name,
         u'bmj': url,
-        u'processed': False
+        u'processed': False,
+        u'date':datetime.now()
     })
 
 def get_unprocessed_names(db):

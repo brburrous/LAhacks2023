@@ -14,3 +14,5 @@ Finally, export the flask variable using `export FLASK_APP=storyAI.py`
 # Skip that and use the install script, mate!!
 
 `./start`
+
+`npx tailwindcss -i ./app/static/src/input.css -o ./app/static/dist/css/output.css --watch`

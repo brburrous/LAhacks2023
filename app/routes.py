@@ -4,10 +4,27 @@ import boto3, json
 import os
 from werkzeug.utils import secure_filename
 
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+from datetime import datetime
+
+
+cred = credentials.Certificate('firebase_key.json')
+firebase_admin.initialize_app(cred)
+
+db = firestore.client() 
+
 
 UPLOAD_FOLDER = os.path.join('static', 'uploads')
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
+def addName(db, url):
+    db.collection(u'img_urls').add({
+        u'bmj': url,
+        u'processed': False,
+        u'date':datetime.now()
+    })
 
 
 @app.route('/')
@@ -16,7 +33,7 @@ def index():
     return render_template('style_selection.html')
 
 
-@app.route('/',  methods=("POST", "GET"))
+@app.route('/upload',  methods=("POST", "GET"))
 def uploadFiles():
     if request.method == 'POST':
         # Upload file flask
@@ -41,7 +58,16 @@ def uploadFiles():
                 'ContentType':uploaded_img.mimetype
             }
         ) 
-    return render_template('images2.html')
+        url = f"https://lahacks2023-ky-austin-riley-brian.s3.us-west-1.amazonaws.com/{img_filename}"
+        addName(db, url)
+        img_file_name = session.get('uploaded_img_file_name', None)
+        print(request.args)
+        print(request.form.get("fullDesc"))
+        title = request.form.get("fullTitle")
+        desc = request.form.get("fullDesc")
+        routeNum = int(request.form.get("number"))
+        print(routeNum)
+    return render_template('narrative_builder2.html', title=title, description=desc, route_num=routeNum, img_file_name=img_file_name)
 
 @app.route('/show_image')
 def displayImage():

@@ -11,6 +11,7 @@ def addName(db, name, url):
     db.collection(u'img_urls').add({
         u'name': name,
         u'bmj': url,
+        u'data:u'asdf',
         u'processed': False
     })
 

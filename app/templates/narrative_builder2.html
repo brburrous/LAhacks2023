@@ -9,16 +9,14 @@
     <div class="flex flex-wrap">
         <!-- Left column: file upload button -->
         <div class="w-full md:w-1/2 p-4">
-          <form method="POST" enctype="multipart/form-data" action="/upload" class="flex  w-full px-4 py-6 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white">
-            <label class="block mb-2 font-bold text-primary-blue px-4" for="file-upload">
+          <form method="POST" enctype="mulipart/form-data" action="/upload" class="flex block w-full px-4 py-6 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white">
+            <label class="block mb-2 font-bold text-green-400 px-4" for="file-upload">
               Upload Image
             </label>
-            <input class="block " id="file-upload" type="file" name="uploaded-file" accept=".jpg, .png, .jpeg">
+            <input class="block " id="file-upload" type="file" type="file" name="uploaded-file" accept=".jpg, .png, .jpeg">
             <input class="text-white hover:bg-gray-700 hover:cursor-pointer p-2 rounded-md outline-2 outline-white" type="submit" value="Submit">
-          <textarea hidden name="fullTitle" id="" cols="30" rows="10">{{title}}</textarea>
-          <textarea hidden name="fullDesc" id="" cols="30" rows="10">{{description}}</textarea>
-          <input type="hidden" name="number" value={{route_num}}>
           </form>
+          <img src={{ url_for('static', filename=img_file_name) }} class="w-60" alt="">
         </div>
 
         <!-- Right column: text inputs and text area -->
