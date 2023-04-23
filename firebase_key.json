@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "lahacks2023-384602",
+  "private_key_id": "de0ce4cb18e43630648c16f608c1910d6c6f6d6d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCu74yTZGrcAoGm\nLdKBfa5E1WOe/kbtm1QKO4u0+isa1CeijjwnPYuDMASvgmaB+ocndCmIRmdu5EZy\noMyhTMu8W++Vd0TpW+XpE4atwdM/VFXDWOcJK1k8EGbDnBfqH7Lu1PYSJ04z1J4G\nvqm2ZPf5OiK0t981BQ6cCGYBZyTL3kGrxdjxDDx/DaWtDVg7i/4b2hCs+WTRkJYt\nw5i87klv+KzaCouPMMMQAHJ8e+VK1i1svgZggrjFW3hVtopakBCHYeK/1YlGXtEh\nH7pc9nnU1QQ3Q6zLb8jhBRe1RfYDEi7XT5TRTdPjXB26jgc15AitLOjnawcT9PkV\nWLGv6KO5AgMBAAECggEAQqXIWIVLAww/adkOWMBRyy7DWBlHW5Iwl/9ssCQZlQyc\nFx36g/a6Nt5uApH7TOzuXhUvF5i/Imv8/QIPRCrWeipKopbAnemhs8V5K6zrNzcB\nv72YtBEcW7ph9Id9QvkVulFPeMYZ0LxiAm7UiMV6Bi1keJaPBwuor8CxYDp0NekT\ntKV2OLNoUV5/J3B56Hg4kchwJqsR2OPm79QY5+V1XFhtPBXKKSX6rEunOZ++AcVa\niOR4WeIJX5t8c0GwLFpVFQrb0sCkiEvX14ZgV0c2hOmVKfQrYrtCPvvFTz84thTb\nQiZg65leop7J+e21O35iHLIb40bmsKBkL9QMBJhm2wKBgQDXUOYTW5RStaBdHbGb\nC6vvcde4HiWs53xVM8tGkEplADeceDPTyVlKlbiZi73/p13MQmrc0roKtc2p67Ak\nJ7VCEYq7KVreZHxhFrpnZxoFpDljyGz0V7KT1bMOO9pXmZFgEMqcspsBpt/sle5y\nuTUcg1A3SCsf202QEfRivx0LHwKBgQDP/WgjEXyEP9RZxSoR/+0WnX2CgbN2a0yZ\nun0b+O5WDReuCTuWs+Hb0Lwr9JeTTWdOKLXAe8KrSS6Q/IcMZeYYejgTrO2kDKaV\nt2AsYIgunL6RXv1MfBlPNQoW2qtDo9IxIGPUwLEQyhgWK6esTXEYqQ66K0ahJG8y\nA6vgFFfOJwKBgQDW2/2bV4mdN209PkJbC7yZBitTqZHDBoSFqVexpI74Vs0nsLNX\nJdeam+lIH7CLiwIIsEZe8VGBGoaOh4iPq6gus76SoePxhKixYbLFOJc5BfXW4swG\nz/R9nYQ+Me/h9nahPGBTGc+gSFuvhLYbeUHMoCTN5ZBTC85Mc/5BA6EB1QKBgHqF\nXmj6Dg2hxCe1m5jK2BEwaRUN7nfdsVwFnVlzBIMwZzigO7gE8xGYHqEODpQ5Tpee\nJ6LhxMU98O57s9o71JWquYntnne69A7R3ReHLfG3aBMej7wUhpxANFdOLQFFabaC\nzAwyDpxDUHkO8lDvtaW/QOuuPocCfXZK716q3SaVAoGAc4NKrGSyzedwTVqz8bFw\nYRt4XM1l3ao58u9rJ2/WqqrmTukZ5j7IMNaY9Bn6ayuukKkFrQx8HKQXdRYYw3LP\nibZlQifdj/zW/2lz2ZiCCqQH8ooRoRdhLiEU8f9yrBQyTkv/XaDDQjWQoPSgwvma\njErK4TiKYjzQi7QytEWLudE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "brian-s-mac@lahacks2023-384602.iam.gserviceaccount.com",
+  "client_id": "106480443767218912451",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/brian-s-mac%40lahacks2023-384602.iam.gserviceaccount.com"
+}

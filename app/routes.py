@@ -3,6 +3,10 @@ from app import app
 import boto3, json
 import os
 from werkzeug.utils import secure_filename
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+
 
 
 UPLOAD_FOLDER = os.path.join('static', 'uploads')
@@ -52,3 +56,33 @@ def displayImage():
     return render_template('show_image.html', user_image = img_file_name)
  
 
+@app.route('/firebase')
+def add2Firebase():
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+cred = credentials.Certificate('firebase_key.json')
+
+app = firebase_admin.initialize_app(cred)
+
+db = firestore.client() 
+doc_ref = db.collection(u'users').document(u'alovelace')
+doc_ref.set({
+    u'first': u'Ada',
+    u'last': u'Lovelace',
+    u'born': 1815
+})
+    
+
+def addName(name):
+    cred = credentials.Certificate('firebase_key.json')
+
+    app = firebase_admin.initialize_app(cred)
+
+    db = firestore.client() 
+    doc_ref = db.collection(u'users').document(name)
+    doc_ref.set({
+        u'first': name,
+        u'last': u'Lovelace',
+        u'born': 1815
+    })
