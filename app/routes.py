@@ -60,3 +60,7 @@ def style_selection():
 @app.route('/narrative.builder')
 def narrative_builder():
     return render_template('narrative_builder.html')
+
+@app.route('/your.story')
+def finished():
+    return render_template('finished.html')
