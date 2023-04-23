@@ -4,5 +4,5 @@ foo
 app/__pycache__
 credentials.json
 .vscode
-
-
+.DS_Store
+app/.DS_Store
