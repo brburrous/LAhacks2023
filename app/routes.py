@@ -27,7 +27,7 @@ def uploadFiles():
         # Upload file to database (defined uploaded folder in static path)
         print(app.config["UPLOAD_FOLDER"])
         print("foo")
-        os.chdir("app")
+        os.chdir("app/static")
         print(os.listdir())
         uploaded_img.save(os.path.join(app.config['UPLOAD_FOLDER'], img_filename))
         # Storing uploaded file path in flask session
