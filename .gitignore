@@ -1,6 +1,7 @@
 venv
 __pycache__
 foo
+<<<<<<< HEAD
 app/__pycache__
 credentials.json
 .vscode
