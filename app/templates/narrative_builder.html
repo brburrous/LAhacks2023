@@ -2,18 +2,32 @@
 
 {% block body %}
 <header>
+<<<<<<< HEAD
     <h1 class="bg-black text-primary-blue text-6xl font-serif p-6">{{ title }}</h1>
     <p class="bg-black text-white ps-6 p-3 ">{{ description }}</p>
+=======
+    <h1 class="bg-black text-primary-blue text-6xl font-serif p-6">Part 1: Call to Adventure</h1>
+    <p class="bg-black text-white ps-6 p-3 "> Upload an image that signifies the beginning of your adventure.</p>
+>>>>>>> master
 </header>
 <main id = "narrative-page" class="bg-black h-screen">
     <div class="flex flex-wrap">
         <!-- Left column: file upload button -->
         <div class="w-full md:w-1/2 p-4">
+<<<<<<< HEAD
           <form>
             <label class="block mb-2 font-bold text-primary-blue" for="file-upload">
               Upload Image
             </label>
             <input class="block w-full px-4 py-2 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white" id="file-upload" type="file">
+=======
+          <form method="POST" enctype="mulipart/form-data" action="/narrative_builder" class="flex block w-full px-4 py-6 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white">
+            <label class="block mb-2 font-bold text-primary-blue px-4" for="file-upload">
+              Upload Image
+            </label>
+            <input class="block " id="file-upload" type="file" type="file" name="uploaded-file" accept=".jpg, .png, .jpeg">
+            <input class="text-white hover:bg-gray-700 hover:cursor-pointer p-2 rounded-md" type="submit" value="Submit">
+>>>>>>> master
           </form>
         </div>
 
@@ -40,6 +54,7 @@
             </div>
           </form>
           
+<<<<<<< HEAD
           {% if route_num < 6 %}
             <div class="mb-4">
               <button onclick="window.location.href='/narrative.builder{{ route_num + 1 }}';"
@@ -57,6 +72,13 @@
           {% endif %} 
 
           
+=======
+          <div class="mb-4">
+            <button class="bg-primary-blue hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">
+              Submit
+            </button>
+          </div>
+>>>>>>> master
 
         </div>
       </div>

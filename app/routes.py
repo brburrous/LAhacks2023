@@ -58,6 +58,7 @@ def narrative_builder1():
     description = 'Upload an image that signifies the beginning of your adventure'
     return render_template('narrative_builder.html', title=title, description=description, route_num=1)
 
+<<<<<<< HEAD
 @app.route('/narrative.builder2')
 def narrative_builder2():
     title = 'Part 2: The Crossing of the First Threshold'
@@ -89,6 +90,17 @@ def narrative_builder6():
     return render_template('narrative_builder.html', title=title, description=description, route_num=6)
 
 @app.route('/your.story')
+=======
+@app.route('/style_selection')
+def style_selection():
+    return render_template('style_selection.html')
+
+@app.route('/narrative_builder')
+def narrative_builder():
+    return render_template('narrative_builder.html')
+
+@app.route('/your_story')
+>>>>>>> master
 def your_story():
     return render_template('your_story.html')
 

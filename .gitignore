@@ -6,4 +6,10 @@ credentials.json
 .vscode
 .DS_Store
 app/static/dist/css/*
+<<<<<<< HEAD
 app/static/dist/css/output.css
+=======
+app/static/dist/css/output.css
+
+
+>>>>>>> master
