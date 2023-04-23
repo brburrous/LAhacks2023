@@ -39,3 +39,7 @@ def displayImage():
     # Display image in Flask application web page
     return render_template('show_image.html', user_image = img_file_name)
  
+
+@app.route('/riley')
+def riley():
+    return render_template('style_selection.html')
