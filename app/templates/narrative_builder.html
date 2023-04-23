@@ -9,11 +9,12 @@
     <div class="flex flex-wrap">
         <!-- Left column: file upload button -->
         <div class="w-full md:w-1/2 p-4">
-          <form>
-            <label class="block mb-2 font-bold text-primary-blue" for="file-upload">
+          <form method="POST" enctype="mulipart/form-data" action="/narrative_builder" class="flex block w-full px-4 py-6 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white">
+            <label class="block mb-2 font-bold text-primary-blue px-4" for="file-upload">
               Upload Image
             </label>
-            <input class="block w-full px-4 py-2 leading-tight border-slate-700 text-gray-300 border-2 rounded appearance-none focus:outline-none focus:bg-primary-blue focus:border-white" id="file-upload" type="file">
+            <input class="block " id="file-upload" type="file" type="file" name="uploaded-file" accept=".jpg, .png, .jpeg">
+            <input class="text-white hover:bg-gray-700 hover:cursor-pointer p-2 rounded-md" type="submit" value="Submit">
           </form>
         </div>
 

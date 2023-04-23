@@ -53,15 +53,15 @@ def displayImage():
  
 
 
-@app.route('/style.selection')
+@app.route('/style_selection')
 def style_selection():
     return render_template('style_selection.html')
 
-@app.route('/narrative.builder')
+@app.route('/narrative_builder')
 def narrative_builder():
     return render_template('narrative_builder.html')
 
-@app.route('/your.story')
+@app.route('/your_story')
 def your_story():
     return render_template('your_story.html')
 
